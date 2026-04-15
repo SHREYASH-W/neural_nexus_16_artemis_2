@@ -98,15 +98,4 @@ This preprocessed dataset and analysis framework can be applied to:
 - Both preprocessed and unprocessed analyses are available for comparison and validation
 - Label encoding was applied to ensure compatibility with machine learning algorithms
 
-## Getting Started
 
-1. Review the notebooks in sequence: start with unprocessed analyses, then examine preprocessed analysis
-2. Load the CSV files (train.csv, test.csv) using Pandas
-3. Follow the preprocessing steps outlined in the notebooks
-4. Utilize the cleaned dataset for machine learning model development
-5. Reference the EDA insights for feature importance and selection
-
----
-
-**Last Updated**: April 2026
-**Repository**: SHREYASH-W/neural_nexus_16_artemis_2
