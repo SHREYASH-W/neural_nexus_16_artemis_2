@@ -1,15 +1,112 @@
-**Repo Overview**
-The repo consist of two eda's done by paras rawal and priyanshu bhatt before the preprocessing and another one with proper preprocessing and its eda
-**Dataset description**
-dataset consisted of heterogeneous pediatric medical data  which was structured clinical and demographic features that contained missing values, noise and class imbalance, reflecting real-world healthcare challenges.
-dataset consisted 3 csv files, named as train,test and sample_submission
-the train.csv had 45 columns and 22,084 rows whereas the test set consist of 43 columns(Genetic disorder and Disorder subclass were removed) and 9,466 rows
+# Neural Nexus: Pediatric Genetic Disorder Classification
 
-**Preprocessing:**
-1. column drop that were not significant to achieve the purpose of our problem statement
-2. All the NaN/NULL values were replaced by the mean value in the age column(Patient, Mother and Father)
-3. All the remaining NaN/NULL values where dropped.
-4. Label encoding was done in the processed data.
+## Project Overview
 
-**What was found in EDA**
-EDA was done in 3 notebooks in total, two of them consisted eda without preprocessing and 1 with preprocessing
+**Neural Nexus** is a comprehensive machine learning project focused on exploratory data analysis (EDA) and preprocessing of heterogeneous pediatric medical data. The project aims to classify genetic disorders using structured clinical and demographic features extracted from real-world healthcare datasets.
+
+The repository contains multiple analysis approaches, including exploratory data analysis both with and without preprocessing, enabling comparative study of how data preparation impacts feature understanding and model readiness.
+
+## Dataset Description
+
+The project utilizes a pediatric medical dataset containing heterogeneous clinical and demographic information with real-world challenges including missing values, noise, and class imbalance.
+
+### Dataset Specifications:
+- **Training Set**: 45 columns × 22,084 rows
+- **Test Set**: 43 columns × 9,466 rows
+- **File Format**: CSV
+- **Files Included**: train.csv, test.csv, sample_submission.csv
+- **Target Variables**: Genetic disorder classification and disorder subclass categorization
+- **Data Characteristics**: Heterogeneous medical features, missing values, noise, class imbalance
+
+## Repository Structure
+
+### Notebooks:
+
+1. **neural-nexus-eda-without-preprocessing.ipynb** - Initial exploratory analysis on raw data without preprocessing
+2. **neural-nexus-eda-without-preprocessing-2.ipynb** - Alternative exploratory analysis without preprocessing
+3. **neural-nexus-eda-with-preprocessing.ipynb** - Comprehensive EDA following data preprocessing
+
+## Data Preprocessing Pipeline
+
+The preprocessing workflow implemented addresses key data quality issues:
+
+### Preprocessing Steps:
+
+1. **Feature Selection**: Removal of non-significant columns that do not contribute to the problem statement
+2. **Missing Value Imputation**: 
+   - Mean-based imputation for age-related columns (Patient Age, Mother Age, Father Age)
+   - Removal of remaining null/NaN values
+3. **Categorical Encoding**: Label encoding applied to categorical features in the processed dataset
+4. **Data Preparation**: Final cleaned dataset ready for modeling
+
+## Exploratory Data Analysis (EDA)
+
+The project employs a multi-staged EDA approach:
+
+- **Unprocessed Data Analysis**: Two separate EDA notebooks examine raw data distributions, missing value patterns, and feature relationships without any preprocessing
+- **Preprocessed Data Analysis**: One notebook presents EDA on cleaned, processed data with encoded features
+
+This comparative approach enables:
+- Understanding of raw data quality issues
+- Impact assessment of preprocessing decisions
+- Feature distribution insights post-cleaning
+- Pattern identification in clinical variables
+- Class imbalance analysis
+
+## Key Findings
+
+- Identification of significant clinical and demographic predictors for genetic disorder classification
+- Quantification of missing data patterns and their distribution across features
+- Assessment of class imbalance in the target variable
+- Feature relationship analysis in both raw and processed datasets
+
+## Technologies & Libraries
+
+- **Python 3.12.12**
+- **Data Analysis**: Pandas, NumPy
+- **Visualization**: Matplotlib, Seaborn
+- **Machine Learning**: Scikit-learn
+- **Jupyter Notebooks**: For interactive analysis and documentation
+
+## Project Contributors
+
+- Paras Rawal
+- Priyanshu Bhatt
+- Analysis and Preprocessing Team
+
+## Dataset Access
+
+The dataset contains:
+- Clinical measurements and patient demographics
+- Structured features for pediatric patients
+- Multi-class disorder labels
+- Train-test split prepared for model validation
+
+## Use Cases
+
+This preprocessed dataset and analysis framework can be applied to:
+- Genetic disorder prediction and classification
+- Medical diagnosis support systems
+- Healthcare data quality assessment
+- Machine learning model development in clinical contexts
+- Feature engineering for medical ML applications
+
+## Notes
+
+- The dataset reflects real-world healthcare data challenges including missing values and imbalance
+- Preprocessing decisions were made to balance data quality with information retention
+- Both preprocessed and unprocessed analyses are available for comparison and validation
+- Label encoding was applied to ensure compatibility with machine learning algorithms
+
+## Getting Started
+
+1. Review the notebooks in sequence: start with unprocessed analyses, then examine preprocessed analysis
+2. Load the CSV files (train.csv, test.csv) using Pandas
+3. Follow the preprocessing steps outlined in the notebooks
+4. Utilize the cleaned dataset for machine learning model development
+5. Reference the EDA insights for feature importance and selection
+
+---
+
+**Last Updated**: April 2026
+**Repository**: SHREYASH-W/neural_nexus_16_artemis_2
