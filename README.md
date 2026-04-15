@@ -53,6 +53,36 @@ This comparative approach enables:
 - Pattern identification in clinical variables
 - Class imbalance analysis
 
+<div align="center">
+
+## Visualizations
+
+<img src="https://github.com/user-attachments/assets/f55e8400-1e9f-4bf3-be13-9e74a0a2874e" width="80%" alt="Visualization 1" />
+
+<br/>
+
+<img src="https://github.com/user-attachments/assets/4fcc2a80-dfa2-4592-9eed-bbd4a5559dcd" width="80%" alt="Visualization 2" />
+
+<br/>
+
+<img src="https://github.com/user-attachments/assets/bb3348a6-4bfc-45ba-a674-c1a82ff62ae7" width="80%" alt="Visualization 3" />
+
+<br/>
+
+<img src="https://github.com/user-attachments/assets/50133fbd-faab-4830-8acc-4fe3fbfcef84" width="80%" alt="Visualization 4" />
+
+<br/>
+
+<img src="https://github.com/user-attachments/assets/dd1d1e20-e988-456a-b1ff-830c02535016" width="80%" alt="Visualization 5" />
+
+<br/>
+
+<img src="https://github.com/user-attachments/assets/87f78f66-babc-4afc-882a-05b995f7877e" width="80%" alt="Visualization 6" />
+
+</div>
+
+
+
 ## Key Findings
 
 - Identification of significant clinical and demographic predictors for genetic disorder classification
