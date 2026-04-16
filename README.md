@@ -148,7 +148,7 @@ Enables model to use all features correctly
 Prevents loss of information due to missing values
 Converts categorical data into usable numerical format
  Biggest improvement in overall accuracy
-⚡ 2. Column Subsampling (colsample_bytree)
+2. Column Subsampling (colsample_bytree)
 What was added
 Each tree trains on a random subset of features
  Why it helps
