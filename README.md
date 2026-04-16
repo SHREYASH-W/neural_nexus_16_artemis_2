@@ -128,4 +128,91 @@ This preprocessed dataset and analysis framework can be applied to:
 - Both preprocessed and unprocessed analyses are available for comparison and validation
 - Label encoding was applied to ensure compatibility with machine learning algorithms
 
-
+##Improved XGBoost (Custom) — What Was Changed & Why It Works Better
+Overview
+The original implementation was a basic gradient boosting regressor. However, the dataset contains:
+Many categorical features
+Significant missing values
+Mixed data types
+The updated version addresses these issues and introduces optimizations inspired by real XGBoost.
+1. Data Preprocessing (Major Accuracy Boost)
+Problem
+Model expected numeric input
+Dataset contains many object columns
+Missing values were ignored
+Solution
+Numeric Features → Median Imputation
+Categorical Features → Mode Imputation + One-Hot Encoding
+Impact
+Enables model to use all features correctly
+Prevents loss of information due to missing values
+Converts categorical data into usable numerical format
+ Biggest improvement in overall accuracy
+⚡ 2. Column Subsampling (colsample_bytree)
+What was added
+Each tree trains on a random subset of features
+ Why it helps
+Reduces overfitting
+Encourages diverse trees
+Mimics real XGBoost behavior
+ 3. Row Subsampling (subsample)
+ What was added
+Each tree trains on a random subset of data
+ Why it helps
+Reduces variance
+Prevents memorization of training data
+Improves generalization
+ 4. Stronger Tree Learner
+ Before
+Custom tree (less optimized)
+ After
+Used DecisionTreeRegressor
+ Why it helps
+Better splits
+Faster computation
+More stable training
+ 5. Learning Rate + Shrinkage
+ Before
+Python
+f_m += lr * preds
+ After
+Python
+pred += lr * update / (1 + reg_lambda)
+ Why it helps
+Prevents large jumps
+Stabilizes training
+Adds regularization effect
+ 6. Regularization (reg_lambda)
+ What it does
+Penalizes large updates
+ Why it helps
+Reduces overfitting
+Makes model more robust on noisy data
+ 7. Early Stopping
+ What was added
+Stops training if validation error stops improving
+ Why it helps
+Avoids over-training
+Saves computation time
+Improves real-world performance
+ 8. Feature-wise Training Tracking
+What was added
+Each tree stores:
+Its feature subset
+Its learned structure
+Why it helps
+Ensures correct prediction mapping
+Prevents feature mismatch issues
+Overall Improvements
+Component
+Effect
+Data preprocessing
+ Huge accuracy boost
+Subsampling
+Better generalization
+Strong trees
+Faster + more accurate
+Regularization
+Prevents overfitting
+Early stopping
+Efficient training
